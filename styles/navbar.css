@@ -1,0 +1,94 @@
+/* Desktop Navigation/Status Bar */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: flex-start;
+    background-color: #C0C0C0;
+    gap: 30px;
+    padding: 15px 0 15px 30px;
+}
+
+.bottom-nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.bottom-nav-icon {
+    width: 50px;
+    height: 50px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.bottom-nav-icon p {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.bottom-nav-label {
+    font-size: 10px;
+    color: white;
+    margin: 0;
+    white-space: nowrap;
+}
+
+.hover-effect:hover {
+    outline: white dashed 2px;
+}
+
+.home-icon {
+    background-color: #D3D3D3;
+}
+
+.home-icon p {
+    color: black;
+}
+
+.about-icon {
+    background-color: #2A2A2A;
+}
+
+.about-icon p {
+    color: white;
+}
+
+.showcase-icon {
+    background-color: #F5A623;
+}
+
+.showcase-icon p {
+    color: black;
+}
+
+.experiments-icon {
+    background-color: #8E44AD;
+}
+
+.experiments-icon p {
+    color: white;
+}
+
+.start {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.start .bottom-nav-icon {
+    width: 120px;
+    height: 50px;
+}
+
+a {
+    text-decoration: none;
+}
