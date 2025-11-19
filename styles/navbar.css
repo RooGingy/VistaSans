@@ -1,94 +1,148 @@
 /* Desktop Navigation/Status Bar */
-.bottom-nav {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    display: flex;
-    justify-content: flex-start;
-    background-color: #C0C0C0;
-    gap: 30px;
-    padding: 15px 0 15px 30px;
+body {
+    font-family: "vista-sans", sans-serif;
+    background-color: #357EC7;
+    margin: 0;
+    padding: 20px;
 }
 
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: flex-start;
+  background-color: #c0c0c0cd;
+  gap: 30px;
+  padding: 15px 0 15px 30px;
+}
+
+/* Navigation Items */
 .bottom-nav-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .bottom-nav-icon {
-    width: 50px;
-    height: 50px;
+  width: 50px;
+  height: 50px;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.bottom-nav-icon p {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.bottom-nav-label {
+  font-size: 10px;
+  color: white;
+  margin: 0;
+  white-space: nowrap;
+}
+
+/* Start Button */
+.start {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.start .bottom-nav-icon {
+  width: 120px;
+  height: 50px;
+}
+
+/* Default Icon Styles */
+.icon {
+    width: 80px;
+    height: 80px;
     background-color: black;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
 }
 
-.bottom-nav-icon p {
+.icon p {
     color: white;
-    font-size: 20px;
+    font-size: 40px;
     font-weight: bold;
     margin: 0;
 }
 
-.bottom-nav-label {
-    font-size: 10px;
+.icon-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    text-align: center;
+    width: fit-content;
+}
+
+.icon-description {
+    font-size: 14px;
     color: white;
     margin: 0;
-    white-space: nowrap;
+    text-align: center;
+    white-space: normal;
+    word-wrap: break-word;
+    max-width: 80px;
+    line-height: 1.2;
 }
 
-.hover-effect:hover {
-    outline: white dashed 2px;
-}
-
+/* Home Icon */
 .home-icon {
-    background-color: #D3D3D3;
+  background-color: #d3d3d3;
 }
 
 .home-icon p {
-    color: black;
+  color: black;
 }
 
+/* About Icon */
 .about-icon {
-    background-color: #2A2A2A;
+  background-color: #2a2a2a;
 }
 
 .about-icon p {
-    color: white;
+  color: white;
 }
 
+/* Showcase Icon */
 .showcase-icon {
-    background-color: #F5A623;
+  background-color: #f5a623;
 }
 
 .showcase-icon p {
-    color: black;
+  color: black;
 }
 
+/* Experiments Icon */
 .experiments-icon {
-    background-color: #8E44AD;
+  background-color: #8e44ad;
 }
 
 .experiments-icon p {
-    color: white;
+  color: white;
 }
 
-.start {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/* Interactive Effects */
+.hover-effect:hover {
+  outline: white dashed 2px;
 }
 
-.start .bottom-nav-icon {
-    width: 120px;
-    height: 50px;
-}
-
+/* General Styles */
 a {
-    text-decoration: none;
+  text-decoration: none;
 }

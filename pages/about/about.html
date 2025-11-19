@@ -1,29 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="../styles/navbar.css">
-        <link rel="stylesheet" href="styles.css">
-        <link rel="stylesheet" href="../../styles/navbar.css">
-        <link rel="stylesheet" href="../home/styles.css">
 
-        <link rel="stylesheet" href="https://use.typekit.net/trr6wzc.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.typekit.net/trr6wzc.css">
+    <link rel="stylesheet" href="../../styles/navbar.css">    
+    <link rel="stylesheet" href="styles.css">
 
-        <title>About - Vista Sans</title>
-    </head>
+    <title>About - Vista Sans</title>
+</head>
 
-    <body>
-
-        <!-- About Content Window -->
-        <div class="window">
-            <div class="window-header">
-                <div class="window-title">About Vista Sans</div>
-                <div class="window-controls">
-                    <span class="window-button close">×</span>
+<body>
+<!-- Navigation Icons -->
+        <nav class="desktop-icons">
+            <a href="../about/about.html">
+                <div class="icon-container hover-effect">
+                    <div class="icon about-icon">
+                        <p>?</p>
+                    </div>
+                    <p class="icon-description">About Vista</p>
                 </div>
+            </a>
+
+        <a href="../show-casing/show-casing.html">
+                <div class="icon-container hover-effect">
+                    <div class="icon showcase-icon">
+                        <p>SC</p>
+                    </div>
+                    <p class="icon-description">Show Casing</p>
+                </div>
+            </a>
+
+            <a href="#">
+                <div class="icon-container hover-effect ">
+                    <div class="icon experiments-icon">
+                        <p>CE</p>
+                    </div>
+                    <p class="icon-description">Creative Experiments</p>
+                </div>
+            </a>
+        </nav>
+    <!-- About Content Window -->
+    <div class="window">
+        <div class="window-header">
+            <div class="window-title">About Vista Sans</div>
+            <div class="window-controls">
+                <a href="../home/index.html">
+                <span class="window-button close">X</span>
+                </a>
             </div>
-            <div class="window-content">
+        </div>
+        <div class="window-content">
+            <div class="about-content">
                 <p>Vista Sans is a humanist sans-serif typeface designed by
                     Xavier Dupré and released by the foundry Emigre. It came out
                     in the early 2000s and is part of a larger family that also
@@ -55,39 +84,41 @@
                     situations.</p>
             </div>
         </div>
+    </div>
 
-        <!-- Bottom Navigation -->
-        <nav class="bottom-nav">
-            <div class="start">
-                <div class="bottom-nav-item hover-effect">
-                    <div class="bottom-nav-icon home-icon">
-                        <p>Start</p>
-                    </div>
+    <!-- Bottom Navigation -->
+    <nav class="bottom-nav">
+        <div class="start">
+            <div class="bottom-nav-item hover-effect">
+                <div class="bottom-nav-icon home-icon">
+                    <p>Start</p>
                 </div>
             </div>
+        </div>
 
-            <a href="#">
-                <div class="bottom-nav-item hover-effect">
-                    <div class="bottom-nav-icon about-icon">
-                        <p>?</p>
-                    </div>
+            <a href="../about/about.html">
+            <div class="bottom-nav-item hover-effect">
+                <div class="bottom-nav-icon about-icon">
+                    <p>?</p>
                 </div>
-            </a>
-            <a href="#">
-                <div class="bottom-nav-item hover-effect">
-                    <div class="bottom-nav-icon showcase-icon">
-                        <p>SC</p>
-                    </div>
+            </div>
+        </a>
+        <a href="../show-casing/show-casing.html">
+            <div class="bottom-nav-item hover-effect">
+                <div class="bottom-nav-icon showcase-icon">
+                    <p>SC</p>
                 </div>
-            </a>
-            <a href="#">
-                <div class="bottom-nav-item hover-effect">
-                    <div class="bottom-nav-icon experiments-icon">
-                        <p>CE</p>
-                    </div>
+            </div>
+        </a>
+        <a href="#">
+            <div class="bottom-nav-item hover-effect">
+                <div class="bottom-nav-icon experiments-icon">
+                    <p>CE</p>
                 </div>
-            </a>
-        </nav>
+            </div>
+        </a>
+    </nav>
 
-    </body>
+</body>
+
 </html>
