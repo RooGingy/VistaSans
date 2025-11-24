@@ -1,3 +1,8 @@
+/* ===================================
+   VISTA SANS - ABOUT PAGE STYLES
+   =================================== */
+
+/* ===== BASE LAYOUT ===== */
 body {
   font-family: "vista-sans", sans-serif;
   background-color: #357ec7;
@@ -7,6 +12,7 @@ body {
   overflow: hidden;
 }
 
+/* ===== WINDOW STRUCTURE ===== */
 .window {
   position: absolute;
   top: 50%;
@@ -18,6 +24,7 @@ body {
   border: 4px solid #d8d8d8;
 }
 
+/* Window Header */
 .window-header {
   background: #4a90e2;
   color: white;
@@ -57,6 +64,7 @@ body {
   background-color: #e0e0e0;
 }
 
+/* ===== WINDOW CONTENT ===== */
 .window-content {
   padding: 20px;
   background-color: white;
@@ -74,7 +82,15 @@ body {
   margin-bottom: 0;
 }
 
-/* Scrollbar styling for retro look */
+/* ===== SCROLLABLE CONTENT AREA ===== */
+.about-content {
+  overflow: auto;
+  background-color: #e0e0e0;
+  padding: 15px;
+  max-height: 360px;
+}
+
+/* Retro-style scrollbar */
 .about-content::-webkit-scrollbar {
   width: 16px;
 }
@@ -91,11 +107,4 @@ body {
 
 .about-content::-webkit-scrollbar-thumb:hover {
   background-color: #606060;
-}
-
-.about-content {
-  overflow: auto;
-  background-color: #e0e0e0;
-  padding: 15px;
-  max-height: 360px;
 }

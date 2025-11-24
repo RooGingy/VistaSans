@@ -1,11 +1,100 @@
-/* Desktop Navigation/Status Bar */
-body {
-    font-family: "vista-sans", sans-serif;
-    background-color: #357EC7;
-    margin: 0;
-    padding: 20px;
+/* ===================================
+   VISTA SANS - GLOBAL NAVIGATION STYLES
+   =================================== */
+
+/* ===== MAIN TITLE SECTION ===== */
+.Title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
+.Title h1 {
+  color: orange;
+  font-size: 92px;
+  margin: 0;
+  text-align: center;
+}
+
+.Title h2 {
+  color: white;
+  font-size: 54px;
+  margin: 0;
+  text-align: center;
+  font-weight: normal;
+  z-index: -1000;
+}
+
+/* ===== BASE STYLES ===== */
+body {
+  font-family: "vista-sans", sans-serif;
+  background-color: #357ec7;
+  margin: 0;
+  padding: 20px;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ===== DESKTOP NAVIGATION ICONS ===== */
+.desktop-icons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+  z-index: -1000;
+}
+
+.icon-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  text-align: center;
+  width: fit-content;
+}
+
+.icon {
+  width: 80px;
+  height: 80px;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.icon p {
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.icon-description {
+  font-size: 14px;
+  color: white;
+  margin: 0;
+  text-align: center;
+  white-space: normal;
+  word-wrap: break-word;
+  max-width: 80px;
+  line-height: 1.2;
+}
+
+/* ===== BOTTOM TASKBAR ===== */
+.nav-background {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 70px;
+  background-color: #357ec7;
+  z-index: 999;
+}
 .bottom-nav {
   position: fixed;
   bottom: 0;
@@ -16,9 +105,9 @@ body {
   background-color: #c0c0c0cd;
   gap: 30px;
   padding: 15px 0 15px 30px;
+  z-index: 1000;
 }
 
-/* Navigation Items */
 .bottom-nav-item {
   display: flex;
   flex-direction: column;
@@ -62,45 +151,7 @@ body {
   height: 50px;
 }
 
-/* Default Icon Styles */
-.icon {
-    width: 80px;
-    height: 80px;
-    background-color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 8px;
-}
-
-.icon p {
-    color: white;
-    font-size: 40px;
-    font-weight: bold;
-    margin: 0;
-}
-
-.icon-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    text-align: center;
-    width: fit-content;
-}
-
-.icon-description {
-    font-size: 14px;
-    color: white;
-    margin: 0;
-    text-align: center;
-    white-space: normal;
-    word-wrap: break-word;
-    max-width: 80px;
-    line-height: 1.2;
-}
-
+/* ===== ICON THEME COLORS ===== */
 /* Home Icon */
 .home-icon {
   background-color: #d3d3d3;
@@ -137,12 +188,7 @@ body {
   color: white;
 }
 
-/* Interactive Effects */
+/* ===== INTERACTIVE EFFECTS ===== */
 .hover-effect:hover {
   outline: white dashed 2px;
-}
-
-/* General Styles */
-a {
-  text-decoration: none;
 }
