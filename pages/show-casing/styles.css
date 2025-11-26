@@ -2,54 +2,49 @@
    VISTA SANS - SHOWCASING PAGE STYLES
    =================================== */
 
-/* ===== BASE LAYOUT ===== */
-body {
-  font-family: "vista-sans", sans-serif;
-  background-color: #357ec7;
-  margin: 0;
-  padding: 20px;
-  min-height: 100vh;
-  overflow: hidden;
-}
-
-/* ===== MULTI-WINDOW LAYOUT ===== */
-.window {
-  position: absolute;
-  width: 450px;
-  max-width: 90%;
-  background-color: #c0c0c0;
-  border: 4px solid #d8d8d8;
-  max-height: 70vh;
-  z-index: 10;
-  overflow: hidden;
-}
-
-/* Individual Window Positioning */
-.window-1 {
-  top: 5%;
-  left: 2%;
-}
-
-.window-2 {
-  bottom: 15%;
-  right: 5%;
-}
-
-.window-3 {
-  bottom: 20%;
-  left: 30%;
+/* ===== THREE-WINDOW LAYOUT ===== */
+.windows-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
 }
 
 /* ===== WINDOW STRUCTURE ===== */
+.window {
+  position: absolute;
+  width: 450px;
+  max-height: 500px;
+  background: #14141f;
+  border: 2px solid #00d9ff;
+  border-radius: 8px;
+  box-shadow: 0 0 20px #00d9ff66;
+}
+
+/* Individual Window Positioning */
+.window:nth-child(1) {
+  top: 15%;
+  left: 5%;
+}
+
+.window:nth-child(2) {
+  top: 25%;
+  right: 8%;
+}
+
+.window:nth-child(3) {
+  left: 30%;
+}
+
 /* Window Header */
 .window-header {
-  background: #4a90e2;
-  color: white;
+  background: #1a1a2e;
+  color: #00d9ff;
   padding: 8px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #666;
+  border-bottom: 2px solid #00d9ff;
+  text-shadow: 0 0 5px #00d9ff;
 }
 
 .window-title {
@@ -65,177 +60,209 @@ body {
 .window-button {
   width: 16px;
   height: 16px;
-  background-color: #c0c0c0;
-  border: 1px solid #666;
+  background: #14141f;
+  border: 1px solid #ff3355;
+  border-radius: 3px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 12px;
   font-weight: bold;
-  color: black;
-  text-decoration: none;
+  color: #ff3355;
   cursor: pointer;
+  user-select: none;
+  text-shadow: 0 0 5px #ff3355;
 }
 
 .window-button:hover {
-  background-color: #a0a0a0;
+  background: #1a1a2e;
+  box-shadow: 0 0 10px #ff3355;
 }
 
-/* Window Content Area */
+/* ===== WINDOW CONTENT ===== */
 .window-content {
-  padding: 15px;
-  max-height: calc(70vh - 60px);
+  padding: 20px;
+  background: #0a0e1a;
+  line-height: 1.6;
+  font-size: 16px;
+  color: #e0e0e0;
+  max-height: 400px;
   overflow-y: auto;
-  overflow-x: hidden;
-  color: #333;
 }
 
-/* ===== CONTENT SECTIONS ===== */
-.section {
-  margin-bottom: 40px;
-  padding-bottom: 30px;
-  border-bottom: 2px solid #999;
+.window-content::-webkit-scrollbar {
+  width: 12px;
 }
 
-.section:last-child {
-  border-bottom: none;
+.window-content::-webkit-scrollbar-track {
+  background: #0a0e1a;
+  border: 1px solid #00d9ff33;
+}
+
+.window-content::-webkit-scrollbar-thumb {
+  background: #00d9ff;
+  border: 1px solid #00d9ff;
+  border-radius: 6px;
+}
+
+.window-content::-webkit-scrollbar-thumb:hover {
+  background: #00b8d4;
+  box-shadow: 0 0 10px #00d9ff;
+}
+
+.window-content p {
+  margin: 0 0 16px 0;
+}
+
+.window-content p:last-child {
   margin-bottom: 0;
 }
 
-.section h2 {
+/* ===== CONTENT STYLING ===== */
+.window-content h2 {
   font-size: 24px;
   font-weight: bold;
-  margin-bottom: 20px;
-  color: #2c5aa0;
+  margin: 0 0 20px 0;
+  color: #00d9ff;
   text-align: center;
+  text-shadow: 0 0 10px #00d9ff80;
+}
+
+.window-content h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 20px 0 10px 0;
+  color: #ffbe0b;
+  text-shadow: 0 0 5px #ffbe0b4d;
+}
+
+.window-content h3:first-child {
+  margin-top: 0;
 }
 
 /* ===== CHARACTER DISPLAY SECTION ===== */
-.character-section {
-  text-align: center;
-}
-
 .character-grid {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 6px;
   align-items: center;
+  margin: 10px 0;
 }
 
 .character-row {
   display: flex;
-  gap: 12px;
+  gap: 4px;
   flex-wrap: wrap;
   justify-content: center;
 }
 
 .character-row span {
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 400;
   padding: 6px 8px;
-  background-color: #f0f0f0;
-  border: 1px solid #999;
+  background: #14141f;
+  border: 1px solid #00d9ff4d;
   border-radius: 4px;
-  min-width: 32px;
+  min-width: 30px;
   text-align: center;
   display: inline-block;
+  color: #e0e0e0;
 }
 
 /* Character Row Variations */
 .character-row.uppercase span {
   font-weight: 600;
+  color: #00d9ff;
+  border-color: #00d9ff80;
+}
+
+.character-row.lowercase span {
+  color: #e0e0e0;
 }
 
 .character-row.numbers span {
-  color: #2c5aa0;
+  color: #ffbe0b;
   font-weight: 500;
+  border-color: #ffbe0b80;
 }
 
 .character-row.punctuation span {
-  color: #666;
-  font-size: 28px;
+  color: #8338ec;
+  font-size: 20px;
+  border-color: #8338ec80;
 }
 
 /* ===== DISPLAY TYPOGRAPHY SECTION ===== */
-.display-section {
-  text-align: center;
-}
-
 .display-words {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 10px;
   align-items: center;
+  text-align: center;
+  margin: 15px 0;
 }
 
 .display-word {
-  font-size: 48px;
+  font-size: 40px;
   font-weight: 300;
-  color: #2c5aa0;
-  line-height: 0.9;
+  color: #00d9ff;
+  line-height: 1;
   letter-spacing: -1px;
+  text-shadow: 0 0 10px #00d9ff80;
 }
 
-/* Progressive Size Variations */
+/* Progressive Size and Color Variations */
+.display-word:nth-child(1) {
+  font-size: 40px;
+  color: #00d9ff;
+}
+
 .display-word:nth-child(2) {
-  font-size: 44px;
+  font-size: 36px;
   font-weight: 400;
-  color: #4a90e2;
+  color: #ffbe0b;
+  text-shadow: 0 0 10px #ffbe0b80;
 }
 
 .display-word:nth-child(3) {
-  font-size: 40px;
+  font-size: 32px;
   font-weight: 500;
-  color: #357ec7;
+  color: #ff8800;
+  text-shadow: 0 0 8px #ff880080;
 }
 
 .display-word:nth-child(4) {
-  font-size: 36px;
+  font-size: 28px;
   font-weight: 600;
-  color: #2c5aa0;
+  color: #8338ec;
+  text-shadow: 0 0 8px #8338ec80;
 }
 
 .display-word:nth-child(5) {
-  font-size: 32px;
+  font-size: 24px;
   font-weight: 700;
-  color: #1e4a7a;
+  color: #00ff41;
+  text-shadow: 0 0 8px #00ff4180;
 }
 
-/* ===== BODY COPY SECTION ===== */
-.copy-variation {
-  margin-bottom: 30px;
-  padding: 20px;
-  background-color: #f5f5f5;
-  border: 1px solid #ccc;
-  border-radius: 6px;
+/* ===== BODY COPY VARIATIONS ===== */
+.window-content p.large-copy {
+  font-size: 20px;
+  line-height: 1.8;
+  margin-bottom: 24px;
+  max-width: 380px;
 }
 
-.copy-variation h3 {
-  font-size: 18px;
-  font-weight: 600;
-  margin-bottom: 12px;
-  color: #2c5aa0;
-}
-
-/* Copy Size Variations */
-.large-copy p {
-  font-size: 22px;
-  line-height: 1.4;
-  font-weight: 400;
-  max-width: 500px;
-}
-
-.medium-copy p {
+.window-content p.medium-copy {
   font-size: 16px;
   line-height: 1.6;
-  font-weight: 400;
-  max-width: 600px;
+  margin-bottom: 20px;
+  max-width: 400px;
 }
 
-.small-copy p {
+.window-content p.small-copy {
   font-size: 13px;
-  line-height: 1.8;
-  font-weight: 400;
-  max-width: 650px;
-  text-align: justify;
+  line-height: 1.5;
+  margin-bottom: 16px;
+  max-width: 420px;
 }

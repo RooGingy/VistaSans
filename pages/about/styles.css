@@ -2,16 +2,6 @@
    VISTA SANS - ABOUT PAGE STYLES
    =================================== */
 
-/* ===== BASE LAYOUT ===== */
-body {
-  font-family: "vista-sans", sans-serif;
-  background-color: #357ec7;
-  margin: 0;
-  padding: 20px;
-  min-height: 100vh;
-  overflow: hidden;
-}
-
 /* ===== WINDOW STRUCTURE ===== */
 .window {
   position: absolute;
@@ -20,19 +10,22 @@ body {
   transform: translate(-50%, -50%);
   width: 600px;
   max-width: 90%;
-  background-color: #c0c0c0;
-  border: 4px solid #d8d8d8;
+  background: #14141f;
+  border: 2px solid #00d9ff;
+  border-radius: 8px;
+  box-shadow: 0 0 20px #00d9ff66;
 }
 
 /* Window Header */
 .window-header {
-  background: #4a90e2;
-  color: white;
+  background: #1a1a2e;
+  color: #00d9ff;
   padding: 8px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #666;
+  border-bottom: 2px solid #00d9ff;
+  text-shadow: 0 0 5px #00d9ff;
 }
 
 .window-title {
@@ -48,29 +41,32 @@ body {
 .window-button {
   width: 16px;
   height: 16px;
-  background-color: #c0c0c0;
-  border: 1px solid #666;
+  background: #14141f;
+  border: 1px solid #ff3355;
+  border-radius: 3px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 12px;
   font-weight: bold;
-  color: black;
+  color: #ff3355;
   cursor: pointer;
   user-select: none;
+  text-shadow: 0 0 5px #ff3355;
 }
 
 .window-button:hover {
-  background-color: #e0e0e0;
+  background: #1a1a2e;
+  box-shadow: 0 0 10px #ff3355;
 }
 
 /* ===== WINDOW CONTENT ===== */
 .window-content {
   padding: 20px;
-  background-color: white;
+  background: #0a0e1a;
   line-height: 1.6;
   font-size: 14px;
-  color: black;
+  color: #e0e0e0;
 }
 
 .window-content p {
@@ -85,26 +81,30 @@ body {
 /* ===== SCROLLABLE CONTENT AREA ===== */
 .about-content {
   overflow: auto;
-  background-color: #e0e0e0;
+  background: #14141f;
   padding: 15px;
   max-height: 360px;
+  border-radius: 4px;
+  border: 1px solid #00d9ff33;
 }
 
 /* Retro-style scrollbar */
 .about-content::-webkit-scrollbar {
-  width: 16px;
+  width: 12px;
 }
 
 .about-content::-webkit-scrollbar-track {
-  background-color: #c0c0c0;
-  border: 1px solid #666;
+  background: #0a0e1a;
+  border: 1px solid #00d9ff33;
 }
 
 .about-content::-webkit-scrollbar-thumb {
-  background-color: #808080;
-  border: 1px solid #666;
+  background: #00d9ff;
+  border: 1px solid #00d9ff;
+  border-radius: 6px;
 }
 
 .about-content::-webkit-scrollbar-thumb:hover {
-  background-color: #606060;
+  background: #00b8d4;
+  box-shadow: 0 0 10px #00d9ff;
 }

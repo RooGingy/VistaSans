@@ -2,36 +2,95 @@
    VISTA SANS - GLOBAL NAVIGATION STYLES
    =================================== */
 
+/* ===== BASE STYLES ===== */
+body {
+  font-family: "vista-sans", sans-serif;
+  background: #0a0e1a;
+  margin: 0;
+  padding: 20px;
+  overflow: hidden;
+  height: 100vh;
+}
+
 /* ===== MAIN TITLE SECTION ===== */
 .Title {
   position: absolute;
-  top: 50%;
+  top: 10%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
 .Title h1 {
-  color: orange;
+  color: #ff8800;
   font-size: 92px;
   margin: 0;
   text-align: center;
+  text-shadow: 0 0 8px #ff880066;
+  letter-spacing: 8px;
+  position: relative;
+  z-index: 10;
 }
 
 .Title h2 {
-  color: white;
+  color: #ffffff;
   font-size: 54px;
   margin: 0;
   text-align: center;
   font-weight: normal;
-  z-index: -1000;
+  text-shadow: 0 0 5px #ffffff4d;
+  letter-spacing: 4px;
+  position: relative;
+  z-index: 10;
 }
 
-/* ===== BASE STYLES ===== */
-body {
-  font-family: "vista-sans", sans-serif;
-  background-color: #357ec7;
-  margin: 0;
-  padding: 20px;
+/* ===== CORNER STYLES ===== */
+/* Corner Brackets */
+.corner-top-left {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 150px;
+  height: 150px;
+  border-top: 3px solid #00d9ff;
+  border-left: 3px solid #00d9ff;
+  z-index: 1000;
+  pointer-events: none;
+}
+
+.corner-top-right {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 150px;
+  height: 150px;
+  border-top: 3px solid #00d9ff;
+  border-right: 3px solid #00d9ff;
+  z-index: 1000;
+  pointer-events: none;
+}
+
+.corner-bottom-left {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  width: 150px;
+  height: 150px;
+  border-bottom: 3px solid #00d9ff;
+  border-left: 3px solid #00d9ff;
+  z-index: 1000;
+  pointer-events: none;
+}
+
+.corner-bottom-right {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 150px;
+  height: 150px;
+  border-bottom: 3px solid #00d9ff;
+  border-right: 3px solid #00d9ff;
+  z-index: 1000;
+  pointer-events: none;
 }
 
 a {
@@ -44,7 +103,10 @@ a {
   flex-direction: column;
   gap: 10px;
   align-items: flex-start;
-  z-index: -1000;
+  position: relative;
+  z-index: 10;
+  margin-top: 40px;
+  margin-left: 30px;
 }
 
 .icon-container {
@@ -60,15 +122,17 @@ a {
 .icon {
   width: 80px;
   height: 80px;
-  background-color: black;
+  background: #14141f;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 8px;
+  border: 2px solid;
+  border-radius: 8px;
+  transition: all 0.3s ease;
 }
 
 .icon p {
-  color: white;
   font-size: 40px;
   font-weight: bold;
   margin: 0;
@@ -76,119 +140,49 @@ a {
 
 .icon-description {
   font-size: 14px;
-  color: white;
+  color: #00ffff;
   margin: 0;
   text-align: center;
   white-space: normal;
   word-wrap: break-word;
   max-width: 80px;
   line-height: 1.2;
+  text-shadow: 0 0 5px #00ffff;
 }
 
-/* ===== BOTTOM TASKBAR ===== */
-.nav-background {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 70px;
-  background-color: #357ec7;
-  z-index: 999;
-}
-.bottom-nav {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  display: flex;
-  justify-content: flex-start;
-  background-color: #c0c0c0cd;
-  gap: 30px;
-  padding: 15px 0 15px 30px;
-  z-index: 1000;
-}
-
-.bottom-nav-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.bottom-nav-icon {
-  width: 50px;
-  height: 50px;
-  background-color: black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 5px;
-}
-
-.bottom-nav-icon p {
-  color: white;
-  font-size: 20px;
-  font-weight: bold;
-  margin: 0;
-}
-
-.bottom-nav-label {
-  font-size: 10px;
-  color: white;
-  margin: 0;
-  white-space: nowrap;
-}
-
-/* Start Button */
-.start {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.start .bottom-nav-icon {
-  width: 120px;
-  height: 50px;
-}
-
-/* ===== ICON THEME COLORS ===== */
-/* Home Icon */
-.home-icon {
-  background-color: #d3d3d3;
-}
-
-.home-icon p {
-  color: black;
-}
-
+/* ===== ICON STYLES ===== */
 /* About Icon */
 .about-icon {
-  background-color: #2a2a2a;
+  background: #14141f;
+  border-color: #ff3355;
+  box-shadow: 0 0 15px #ff33554d, inset 0 0 10px #ff33551a;
 }
 
 .about-icon p {
-  color: white;
+  color: #ff3355;
+  text-shadow: 0 0 10px #ff3355;
 }
 
 /* Showcase Icon */
 .showcase-icon {
-  background-color: #f5a623;
+  background: #14141f;
+  border-color: #ffbe0b;
+  box-shadow: 0 0 15px #ffbe0b4d, inset 0 0 10px #ffbe0b1a;
 }
 
 .showcase-icon p {
-  color: black;
+  color: #ffbe0b;
+  text-shadow: 0 0 10px #ffbe0b;
 }
 
 /* Experiments Icon */
 .experiments-icon {
-  background-color: #8e44ad;
+  background: #14141f;
+  border-color: #8338ec;
+  box-shadow: 0 0 15px #8338ec4d, inset 0 0 10px #8338ec1a;
 }
 
 .experiments-icon p {
-  color: white;
-}
-
-/* ===== INTERACTIVE EFFECTS ===== */
-.hover-effect:hover {
-  outline: white dashed 2px;
+  color: #8338ec;
+  text-shadow: 0 0 10px #8338ec;
 }

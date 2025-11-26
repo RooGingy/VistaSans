@@ -1,549 +1,363 @@
 /* ===================================
    VISTA SANS - CREATIVE EXPERIMENTS PAGE
+   HOLOGRAPHIC STICKY NOTES
    =================================== */
 
-/* ===== BASE LAYOUT ===== */
-body {
-  font-family: "vista-sans", sans-serif;
-  background-color: #357ec7;
-  margin: 0;
-  padding: 20px;
-  min-height: 100vh;
-  overflow: hidden;
-}
-
-/* ===== EXPERIMENTAL WINDOW LAYOUT ===== */
-.window {
+/* ===== STICKY NOTE BASE STYLES ===== */
+.sticky-note {
   position: absolute;
-  width: 420px;
-  max-width: 90%;
-  background: linear-gradient(
-    135deg,
-    rgba(255, 255, 255, 0.9) 0%,
-    rgba(220, 220, 220, 0.8) 100%
-  );
-  border: 2px solid rgba(255, 255, 255, 0.3);
-  border-radius: 8px;
-  max-height: 70vh;
-  z-index: 10;
-  overflow: hidden;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  width: 400px;
+  min-height: 350px;
+  backdrop-filter: blur(15px);
+  border-radius: 3px;
+  padding: 30px;
+  box-shadow: 0 15px 45px #00000066, inset 0 1px 0 #ffffff4d;
+  transform: rotate(0deg);
+  transition: transform 0.3s ease;
 }
 
-/* Simple Scattered Positioning */
-.experiment-1 {
-  top: 10%;
-  left: 5%;
+.sticky-note:hover {
+  transform: scale(1.02);
 }
 
-.experiment-2 {
-  top: 30%;
-  right: 10%;
-}
-
-.experiment-3 {
-  bottom: 15%;
-  left: 30%;
-}
-
-/* ===== WINDOW STRUCTURE ===== */
-.window-header {
-  background: linear-gradient(135deg, #4a90e2 0%, #2c5aa0 100%);
-  color: white;
-  padding: 12px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
-}
-
-.window-title {
-  font-weight: bold;
-  font-size: 13px;
-}
-
-.window-controls {
-  display: flex;
-  gap: 2px;
-}
-
-.window-button {
+/* Close Button */
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
   width: 16px;
   height: 16px;
-  background-color: #c0c0c0;
-  border: 1px solid #666;
+  background: #14141f;
+  border: 1px solid #ff3355;
+  border-radius: 3px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 12px;
   font-weight: bold;
-  color: black;
+  color: #ff3355;
   text-decoration: none;
   cursor: pointer;
+  user-select: none;
+  text-shadow: 0 0 5px #ff3355;
+  z-index: 10;
 }
 
-.window-button:hover {
-  background-color: #a0a0a0;
+.close-button:hover {
+  background: #1a1a2e;
+  box-shadow: 0 0 10px #ff3355;
 }
 
-.window-content {
-  padding: 20px;
-  max-height: calc(70vh - 60px);
-  overflow-y: auto;
-  overflow-x: hidden;
-  color: #2c2c2c;
-  background: linear-gradient(
-    135deg,
-    rgba(255, 255, 255, 0.8) 0%,
-    rgba(240, 248, 255, 0.6) 100%
-  );
-  backdrop-filter: blur(5px);
+/* Note Positioning */
+.note-1 {
+  top: 8%;
+  left: 12%;
+  background: #8338ec33;
+  border: 2px solid #8338ec80;
 }
 
-/* ===== EXPERIMENT BASE STYLES ===== */
-.experiment {
-  margin-bottom: 20px;
-}
-
-.experiment h2 {
-  font-size: 20px;
-  font-weight: bold;
-  margin: 0 0 20px 0;
-  color: #8e44ad;
-  text-align: center;
-}
-
-/* ===================================
-   EXPERIMENT 1: VISTA ORB PANGRAM
-   =================================== */
-
-.pangram-experiment {
-  text-align: center;
-}
-
-.pangram-container {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  align-items: center;
-  position: relative;
-}
-
-.pangram-line {
-  font-size: 22px;
-  font-weight: 500;
-  line-height: 1.3;
-  margin: 8px 0;
-  padding: 12px 20px;
-  border-radius: 25px;
-  backdrop-filter: blur(10px);
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-}
-
-.line-1 {
-  background: linear-gradient(
-    135deg,
-    rgba(74, 144, 226, 0.8) 0%,
-    rgba(44, 90, 160, 0.6) 100%
-  );
-  color: white;
-  text-transform: uppercase;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  box-shadow: 0 4px 15px rgba(74, 144, 226, 0.4);
-}
-
-.line-2 {
-  background: linear-gradient(
-    135deg,
-    rgba(245, 166, 35, 0.8) 0%,
-    rgba(255, 193, 7, 0.6) 100%
-  );
-  color: white;
-  font-weight: 400;
-  font-size: 26px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  box-shadow: 0 4px 15px rgba(245, 166, 35, 0.4);
-}
-
-.line-3 {
-  background: linear-gradient(
-    135deg,
-    rgba(142, 68, 173, 0.8) 0%,
-    rgba(156, 39, 176, 0.6) 100%
-  );
-  color: white;
-  font-weight: 600;
-  font-size: 18px;
-  text-transform: uppercase;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  box-shadow: 0 4px 15px rgba(142, 68, 173, 0.4);
-}
-
-/* ===================================
-   EXPERIMENT 2: VISTA GLASS LAYERS
-   =================================== */
-
-.overlap-experiment {
-  text-align: center;
-}
-
-.overlap-container {
-  position: relative;
-  height: 180px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.text-layer {
-  position: absolute;
-  font-size: 36px;
-  font-weight: 700;
-  text-transform: uppercase;
-  padding: 8px 16px;
-  border-radius: 12px;
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-.layer-1 {
-  background: linear-gradient(
-    135deg,
-    rgba(244, 67, 54, 0.7) 0%,
-    rgba(229, 57, 53, 0.5) 100%
-  );
-  color: white;
-  z-index: 4;
-  top: 20px;
-  left: 30px;
-  box-shadow: 0 6px 20px rgba(244, 67, 54, 0.3);
-}
-
-.layer-2 {
-  background: linear-gradient(
-    135deg,
-    rgba(76, 175, 80, 0.7) 0%,
-    rgba(67, 160, 71, 0.5) 100%
-  );
-  color: white;
-  z-index: 3;
-  top: 40px;
-  left: 50px;
-  box-shadow: 0 6px 20px rgba(76, 175, 80, 0.3);
-}
-
-.layer-3 {
-  background: linear-gradient(
-    135deg,
-    rgba(33, 150, 243, 0.7) 0%,
-    rgba(30, 136, 229, 0.5) 100%
-  );
-  color: white;
-  z-index: 2;
-  top: 60px;
-  left: 70px;
-  box-shadow: 0 6px 20px rgba(33, 150, 243, 0.3);
-}
-
-.layer-4 {
-  background: linear-gradient(
-    135deg,
-    rgba(156, 39, 176, 0.7) 0%,
-    rgba(142, 36, 170, 0.5) 100%
-  );
-  color: white;
-  z-index: 1;
-  top: 80px;
-  left: 90px;
-  box-shadow: 0 6px 20px rgba(156, 39, 176, 0.3);
-}
-
-.accent-shapes {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  pointer-events: none;
-}
-
-.circle {
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background: linear-gradient(
-    135deg,
-    rgba(255, 193, 7, 0.8) 0%,
-    rgba(255, 235, 59, 0.6) 100%
-  );
+.note-2 {
   top: 15%;
-  left: 10%;
-  backdrop-filter: blur(5px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  box-shadow: 0 4px 15px rgba(255, 193, 7, 0.4);
+  right: 8%;
+  background: #ff880033;
+  border: 2px solid #ff880080;
 }
 
-.square {
-  position: absolute;
-  width: 25px;
-  height: 25px;
-  background: linear-gradient(
-    135deg,
-    rgba(255, 87, 34, 0.8) 0%,
-    rgba(255, 111, 97, 0.6) 100%
-  );
-  bottom: 25%;
-  right: 15%;
-  border-radius: 4px;
-  backdrop-filter: blur(5px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  box-shadow: 0 4px 15px rgba(255, 87, 34, 0.4);
-}
-
-.triangle {
-  position: absolute;
-  width: 0;
-  height: 0;
-  border-left: 15px solid transparent;
-  border-right: 15px solid transparent;
-  border-bottom: 25px solid rgba(139, 195, 74, 0.8);
+.note-3 {
   bottom: 10%;
-  left: 5%;
-  filter: drop-shadow(0 4px 8px rgba(139, 195, 74, 0.4));
+  left: 35%;
+  background: #00d9ff33;
+  border: 2px solid #00d9ff80;
 }
 
-/* ===================================
-   EXPERIMENT 3: VISTA TASKBAR STYLES
-   =================================== */
-
-.chaos-experiment {
-  text-align: center;
-}
-
-.chaos-container {
-  height: 180px;
+/* ===== NOTE CONTENT ===== */
+.note-content {
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 15px;
+  position: relative;
 }
 
-.chaos-text {
+/* ===================================
+   NOTE 1: OVERLAPPING COMPOSITIONS (PURPLE)
+   =================================== */
+
+.overlap-composition {
+  position: relative;
+  width: 100%;
+  height: 280px;
+}
+
+.overlap-layer {
+  position: absolute;
+  font-size: 72px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #8338ec;
+  opacity: 0.7;
+  text-shadow: 0 0 20px #8338ec80;
+}
+
+.overlap-layer.layer-1 {
+  top: 20px;
+  left: 20px;
+  font-weight: 900;
+  opacity: 0.9;
+}
+
+.overlap-layer.layer-2 {
+  top: 60px;
+  left: 50px;
+  font-weight: 300;
+  opacity: 0.6;
+  font-size: 64px;
+}
+
+.overlap-layer.layer-3 {
+  top: 110px;
+  left: 80px;
+  font-weight: 700;
+  opacity: 0.8;
+  font-size: 56px;
+}
+
+.overlap-layer.layer-4 {
+  top: 160px;
+  left: 110px;
+  font-weight: 400;
+  opacity: 0.5;
+  font-size: 48px;
+}
+
+/* ===================================
+   NOTE 2: ANIMATED TYPOGRAPHY (ORANGE)
+   =================================== */
+
+.animated-text {
   display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.bounce-letter {
+  font-size: 96px;
+  font-weight: 900;
+  color: #ff8800;
+  text-shadow: 0 0 25px #ff880080;
+  animation: bounce 2s ease-in-out infinite;
+}
+
+.bounce-letter:nth-child(1) {
+  animation-delay: 0s;
+}
+.bounce-letter:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.bounce-letter:nth-child(3) {
+  animation-delay: 0.2s;
+}
+.bounce-letter:nth-child(4) {
+  animation-delay: 0.3s;
+}
+.bounce-letter:nth-child(5) {
+  animation-delay: 0.4s;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+  25% {
+    transform: translateY(-15px) scale(1.05);
+  }
+  50% {
+    transform: translateY(0) scale(1);
+  }
+}
+
+.subtitle-line {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 300;
+  color: #ff8800;
+  opacity: 0.8;
+  font-style: italic;
+  animation: fade 3s ease-in-out infinite;
+}
+
+@keyframes fade {
+  0%,
+  100% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}
+
+/* ===================================
+   NOTE 3: MIXED WEIGHTS & SIZES (TEAL)
+   =================================== */
+
+.mixed-typography {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.type-row {
+  display: flex;
+  gap: 15px;
+  align-items: baseline;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
-  gap: 8px;
-  max-width: 350px;
-  line-height: 1.4;
 }
 
-.chaos-text span {
-  display: inline-block;
-  padding: 6px 12px;
-  border-radius: 6px;
-  backdrop-filter: blur(5px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+.type-row span {
+  color: #00d9ff;
+  text-shadow: 0 0 15px #00d9ff80;
+  text-transform: uppercase;
 }
 
-/* Vista-style Button Variations */
-.style-1 {
-  font-size: 18px;
-  font-weight: 400;
-  background: linear-gradient(
-    135deg,
-    rgba(233, 30, 99, 0.8) 0%,
-    rgba(233, 30, 99, 0.6) 100%
-  );
-  color: white;
-  box-shadow: 0 3px 8px rgba(233, 30, 99, 0.3);
-}
-.style-2 {
-  font-size: 24px;
-  font-weight: 700;
-  background: linear-gradient(
-    135deg,
-    rgba(156, 39, 176, 0.8) 0%,
-    rgba(156, 39, 176, 0.6) 100%
-  );
-  color: white;
-  text-transform: uppercase;
-  box-shadow: 0 3px 8px rgba(156, 39, 176, 0.3);
-}
-.style-3 {
-  font-size: 14px;
-  font-weight: 300;
-  background: linear-gradient(
-    135deg,
-    rgba(103, 58, 183, 0.8) 0%,
-    rgba(103, 58, 183, 0.6) 100%
-  );
-  color: white;
-  font-style: italic;
-  box-shadow: 0 3px 8px rgba(103, 58, 183, 0.3);
-}
-.style-4 {
-  font-size: 20px;
-  font-weight: 600;
-  background: linear-gradient(
-    135deg,
-    rgba(63, 81, 181, 0.8) 0%,
-    rgba(63, 81, 181, 0.6) 100%
-  );
-  color: white;
-  text-transform: uppercase;
-  box-shadow: 0 3px 8px rgba(63, 81, 181, 0.3);
-}
-.style-5 {
-  font-size: 16px;
-  font-weight: 400;
-  background: linear-gradient(
-    135deg,
-    rgba(33, 150, 243, 0.8) 0%,
-    rgba(33, 150, 243, 0.6) 100%
-  );
-  color: white;
-  box-shadow: 0 3px 8px rgba(33, 150, 243, 0.3);
-}
-.style-6 {
-  font-size: 22px;
-  font-weight: 700;
-  background: linear-gradient(
-    135deg,
-    rgba(0, 188, 212, 0.8) 0%,
-    rgba(0, 188, 212, 0.6) 100%
-  );
-  color: white;
-  text-transform: uppercase;
-  box-shadow: 0 3px 8px rgba(0, 188, 212, 0.3);
-}
-.style-7 {
-  font-size: 12px;
-  font-weight: 300;
-  background: linear-gradient(
-    135deg,
-    rgba(0, 150, 136, 0.8) 0%,
-    rgba(0, 150, 136, 0.6) 100%
-  );
-  color: white;
-  font-style: italic;
-  box-shadow: 0 3px 8px rgba(0, 150, 136, 0.3);
-}
-.style-8 {
-  font-size: 26px;
-  font-weight: 800;
-  background: linear-gradient(
-    135deg,
-    rgba(76, 175, 80, 0.8) 0%,
-    rgba(76, 175, 80, 0.6) 100%
-  );
-  color: white;
-  text-transform: uppercase;
-  box-shadow: 0 3px 8px rgba(76, 175, 80, 0.3);
-}
-.style-9 {
-  font-size: 17px;
-  font-weight: 400;
-  background: linear-gradient(
-    135deg,
-    rgba(139, 195, 74, 0.8) 0%,
-    rgba(139, 195, 74, 0.6) 100%
-  );
-  color: white;
-  box-shadow: 0 3px 8px rgba(139, 195, 74, 0.3);
-}
-.style-10 {
-  font-size: 15px;
-  font-weight: 500;
-  background: linear-gradient(
-    135deg,
-    rgba(205, 220, 57, 0.8) 0%,
-    rgba(205, 220, 57, 0.6) 100%
-  );
-  color: #2c2c2c;
-  text-transform: uppercase;
-  box-shadow: 0 3px 8px rgba(205, 220, 57, 0.3);
-}
-
-.floating-elements {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  pointer-events: none;
-}
-
-.floating-elements span {
-  position: absolute;
-  font-size: 48px;
+/* Weight variations */
+.type-100 {
+  font-size: 32px;
   font-weight: 100;
-  opacity: 0.1;
-  background: linear-gradient(
-    135deg,
-    rgba(255, 255, 255, 0.3) 0%,
-    rgba(255, 255, 255, 0.1) 100%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
 }
 
-.float-1 {
-  top: 5%;
-  left: 10%;
+.type-300 {
+  font-size: 36px;
+  font-weight: 300;
 }
-.float-2 {
-  top: 15%;
-  right: 10%;
+
+.type-500 {
+  font-size: 40px;
+  font-weight: 500;
 }
-.float-3 {
-  bottom: 20%;
-  left: 20%;
+
+.type-700 {
+  font-size: 48px;
+  font-weight: 700;
 }
-.float-4 {
-  bottom: 10%;
-  right: 20%;
+
+.type-900 {
+  font-size: 52px;
+  font-weight: 900;
 }
-.float-5 {
-  top: 40%;
-  left: 40%;
+
+/* Style variations */
+.type-italic {
+  font-size: 36px;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.type-normal {
+  font-size: 36px;
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Size variations */
+.type-size-sm {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.type-size-md {
+  font-size: 32px;
+  font-weight: 500;
+}
+
+.type-size-lg {
+  font-size: 48px;
+  font-weight: 600;
 }
 
 /* ===== RESPONSIVE DESIGN ===== */
 @media (max-width: 768px) {
-  .window {
-    width: 95%;
-    max-height: 80vh;
-  }
-
-  .experiment-1,
-  .experiment-2,
-  .experiment-3 {
+  .sticky-note {
+    width: 90%;
+    min-height: 300px;
     position: relative;
     margin: 20px auto;
     display: block;
   }
 
-  .pangram-line {
+  .note-1,
+  .note-2,
+  .note-3 {
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    margin: 20px auto;
+  }
+
+  .overlap-layer {
+    font-size: 48px;
+  }
+
+  .bounce-letter {
+    font-size: 64px;
+  }
+
+  .subtitle-line {
     font-size: 18px;
   }
 
-  .text-layer {
+  .center-text {
+    font-size: 80px;
+  }
+
+  .orbit-letter {
+    font-size: 36px;
+  }
+
+  .word {
+    font-size: 20px;
+  }
+
+  .mixed-typography {
+    gap: 15px;
+  }
+
+  .type-100 {
+    font-size: 24px;
+  }
+  .type-300 {
+    font-size: 28px;
+  }
+  .type-500 {
     font-size: 32px;
   }
-
-  .chaos-text span {
-    font-size: 85% !important;
+  .type-700 {
+    font-size: 36px;
   }
-
-  .floating-elements span {
+  .type-900 {
     font-size: 40px;
+  }
+  .type-italic {
+    font-size: 28px;
+  }
+  .type-normal {
+    font-size: 28px;
+  }
+  .type-size-sm {
+    font-size: 16px;
+  }
+  .type-size-md {
+    font-size: 24px;
+  }
+  .type-size-lg {
+    font-size: 36px;
   }
 }
