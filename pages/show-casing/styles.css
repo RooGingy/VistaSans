@@ -12,8 +12,9 @@
 /* ===== WINDOW STRUCTURE ===== */
 .window {
   position: absolute;
-  width: 450px;
-  max-height: 500px;
+  width: 28vw;
+  min-width: 400px;
+  max-height: 60vh;
   background: #14141f;
   border: 2px solid #00d9ff;
   border-radius: 8px;
@@ -49,7 +50,7 @@
 
 .window-title {
   font-weight: bold;
-  font-size: 14px;
+  font-size: 0.85vw;
 }
 
 .window-controls {
@@ -81,12 +82,12 @@
 
 /* ===== WINDOW CONTENT ===== */
 .window-content {
-  padding: 20px;
+  padding: 1.5vw;
   background: #0a0e1a;
   line-height: 1.6;
-  font-size: 16px;
+  font-size: 0.95vw;
   color: #e0e0e0;
-  max-height: 400px;
+  max-height: 50vh;
   overflow-y: auto;
 }
 
@@ -120,7 +121,7 @@
 
 /* ===== CONTENT STYLING ===== */
 .window-content h2 {
-  font-size: 24px;
+  font-size: 1.5vw;
   font-weight: bold;
   margin: 0 0 20px 0;
   color: #00d9ff;
@@ -129,7 +130,7 @@
 }
 
 .window-content h3 {
-  font-size: 18px;
+  font-size: 1.1vw;
   font-weight: 600;
   margin: 20px 0 10px 0;
   color: #ffbe0b;
@@ -157,13 +158,13 @@
 }
 
 .character-row span {
-  font-size: 18px;
+  font-size: 1.1vw;
   font-weight: 400;
-  padding: 6px 8px;
+  padding: 0.4vw 0.5vw;
   background: #14141f;
   border: 1px solid #00d9ff4d;
   border-radius: 4px;
-  min-width: 30px;
+  min-width: 2vw;
   text-align: center;
   display: inline-block;
   color: #e0e0e0;
@@ -188,7 +189,7 @@
 
 .character-row.punctuation span {
   color: #8338ec;
-  font-size: 20px;
+  font-size: 1.2vw;
   border-color: #8338ec80;
 }
 
@@ -213,33 +214,33 @@
 
 /* Progressive Size and Color Variations */
 .display-word:nth-child(1) {
-  font-size: 40px;
+  font-size: 2.5vw;
   color: #00d9ff;
 }
 
 .display-word:nth-child(2) {
-  font-size: 36px;
+  font-size: 2.2vw;
   font-weight: 400;
   color: #ffbe0b;
   text-shadow: 0 0 10px #ffbe0b80;
 }
 
 .display-word:nth-child(3) {
-  font-size: 32px;
+  font-size: 2vw;
   font-weight: 500;
   color: #ff8800;
   text-shadow: 0 0 8px #ff880080;
 }
 
 .display-word:nth-child(4) {
-  font-size: 28px;
+  font-size: 1.7vw;
   font-weight: 600;
   color: #8338ec;
   text-shadow: 0 0 8px #8338ec80;
 }
 
 .display-word:nth-child(5) {
-  font-size: 24px;
+  font-size: 1.5vw;
   font-weight: 700;
   color: #00ff41;
   text-shadow: 0 0 8px #00ff4180;
@@ -247,22 +248,22 @@
 
 /* ===== BODY COPY VARIATIONS ===== */
 .window-content p.large-copy {
-  font-size: 20px;
+  font-size: 1.2vw;
   line-height: 1.8;
   margin-bottom: 24px;
-  max-width: 380px;
+  max-width: 100%;
 }
 
 .window-content p.medium-copy {
-  font-size: 16px;
+  font-size: 1vw;
   line-height: 1.6;
   margin-bottom: 20px;
-  max-width: 400px;
+  max-width: 100%;
 }
 
 .window-content p.small-copy {
-  font-size: 13px;
+  font-size: 0.85vw;
   line-height: 1.5;
   margin-bottom: 16px;
-  max-width: 420px;
+  max-width: 100%;
 }
