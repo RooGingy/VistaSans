@@ -13,7 +13,6 @@
   background: #14141f;
   border: 2px solid #00d9ff;
   border-radius: 8px;
-  box-shadow: 0 0 20px #00d9ff66;
 }
 
 /* Window Header */
@@ -25,7 +24,6 @@
   justify-content: space-between;
   align-items: center;
   border-bottom: 2px solid #00d9ff;
-  text-shadow: 0 0 5px #00d9ff;
 }
 
 .window-title {
@@ -52,12 +50,10 @@
   color: #ff3355;
   cursor: pointer;
   user-select: none;
-  text-shadow: 0 0 5px #ff3355;
 }
 
 .window-button:hover {
   background: #1a1a2e;
-  box-shadow: 0 0 10px #ff3355;
 }
 
 /* ===== WINDOW CONTENT ===== */
@@ -106,5 +102,4 @@
 
 .about-content::-webkit-scrollbar-thumb:hover {
   background: #00b8d4;
-  box-shadow: 0 0 10px #00d9ff;
 }
