@@ -6,16 +6,16 @@
 .windows-container {
   position: relative;
   width: 100%;
-  min-height: 200px;
-  min-width: 200px;
+  min-height: 12.5em;
+  min-width: 12.5em;
 }
 
 /* ===== WINDOW STRUCTURE ===== */
 .window {
   position: absolute;
   width: 25%;
-  min-width: 200px;
-  max-height: 1000px;
+  min-width: 12.5em;
+  max-height: 62.5em;
   background: #14141f;
   border: 2px solid #00d9ff;
   border-radius: 8px;
@@ -58,8 +58,8 @@
 }
 
 .window-button {
-  width: 16px;
-  height: 16px;
+  width: 1.5em;
+  height: 1.5em;
   background: #14141f;
   border: 1px solid #ff3355;
   border-radius: 3px;
@@ -209,19 +209,16 @@
   font-size: 1.25em;
   line-height: 1.8;
   margin-bottom: 24px;
-  max-width: 100%;
 }
 
 .window-content p.medium-copy {
   font-size: 1em;
   line-height: 1.6;
   margin-bottom: 20px;
-  max-width: 100%;
 }
 
 .window-content p.small-copy {
   font-size: 0.875em;
   line-height: 1.5;
   margin-bottom: 16px;
-  max-width: 100%;
 }
