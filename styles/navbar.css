@@ -14,7 +14,7 @@ body {
   background: #0a0e1a;
   margin: 0em;
   padding: 1.25em;
-  overflow: hidden;
+  /* overflow: hidden; */
   z-index: -1000;
   box-sizing: border-box;
 }
