@@ -36,6 +36,11 @@
   gap: 2px;
 }
 
+.window-controls a {
+  text-decoration: none;
+  z-index: 1100;
+}
+
 .window-button {
   width: 16px;
   height: 16px;
@@ -49,10 +54,9 @@
   font-weight: bold;
   color: #ff3355;
   cursor: pointer;
-  user-select: none;
 }
 
-.window-button:hover {
+.window-controls a:hover .window-button {
   background: #1a1a2e;
 }
 
