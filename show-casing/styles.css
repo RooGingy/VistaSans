@@ -6,16 +6,16 @@
 .windows-container {
   position: relative;
   width: 100%;
-  min-height: 12.5em;
-  min-width: 12.5em;
+  min-height: 20%;
+  max-height: 50%;
+  min-width: 20%;
+  max-width: 80%;
 }
 
 /* ===== WINDOW STRUCTURE ===== */
 .window {
   position: absolute;
   width: 25%;
-  min-width: 12.5em;
-  max-height: 62.5em;
   background: #14141f;
   border: 2px solid #00d9ff;
   border-radius: 8px;
