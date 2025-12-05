@@ -28,7 +28,7 @@
 
 .window-title {
   font-weight: bold;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .window-controls {
@@ -61,45 +61,11 @@
   padding: 20px;
   background: #0a0e1a;
   line-height: 1.6;
-  font-size: 14px;
+  font-size: 18px;
   color: #e0e0e0;
 }
 
 .window-content p {
   margin: 0 0 16px 0;
   text-align: justify;
-}
-
-.window-content p:last-child {
-  margin-bottom: 0;
-}
-
-/* ===== SCROLLABLE CONTENT AREA ===== */
-.about-content {
-  overflow: auto;
-  background: #14141f;
-  padding: 15px;
-  max-height: 360px;
-  border-radius: 4px;
-  border: 1px solid #00d9ff33;
-}
-
-/* Retro-style scrollbar */
-.about-content::-webkit-scrollbar {
-  width: 12px;
-}
-
-.about-content::-webkit-scrollbar-track {
-  background: #0a0e1a;
-  border: 1px solid #00d9ff33;
-}
-
-.about-content::-webkit-scrollbar-thumb {
-  background: #00d9ff;
-  border: 1px solid #00d9ff;
-  border-radius: 6px;
-}
-
-.about-content::-webkit-scrollbar-thumb:hover {
-  background: #00b8d4;
 }
