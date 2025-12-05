@@ -10,6 +10,9 @@ body {
   padding: 20px;
   overflow: hidden;
   z-index: -1000;
+  width: 100%;
+  box-sizing: border-box;
+  height: 100%;
 }
 
 /* ===== MAIN TITLE SECTION ===== */

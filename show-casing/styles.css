@@ -40,7 +40,7 @@
 .window-header {
   background: #1a1a2e;
   color: #00d9ff;
-  padding: 8px;
+  padding: 0.5em;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -54,7 +54,7 @@
 
 .window-controls {
   display: flex;
-  gap: 2px;
+  gap: 0.125em;
 }
 
 .window-button {
@@ -85,14 +85,14 @@
 }
 
 .window-content p {
-  margin: 0 0 16px 0;
+  margin: 0 0 1em 0;
 }
 
 /* ===== CONTENT STYLING ===== */
 .window-content h2 {
   font-size: 1.5em;
   font-weight: bold;
-  margin: 0 0 20px 0;
+  margin: 0 0 1.25em 0;
   color: #00d9ff;
   text-align: center;
 }
@@ -100,7 +100,7 @@
 .window-content h3 {
   font-size: 1.125em;
   font-weight: 600;
-  margin: 20px 0 10px 0;
+  margin: 1.25em 0 0.625em 0;
   color: #ffbe0b;
 }
 
@@ -108,14 +108,14 @@
 .character-grid {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 0.375em;
   align-items: center;
-  margin: 10px 0;
+  margin: 0.625em 0;
 }
 
 .character-row {
   display: flex;
-  gap: 4px;
+  gap: 0.25em;
   flex-wrap: wrap;
   justify-content: center;
 }
@@ -160,10 +160,10 @@
 .display-words {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 0.625em;
   align-items: center;
   text-align: center;
-  margin: 15px 0;
+  margin: 0.9375em 0;
 }
 
 .display-word {
@@ -208,17 +208,17 @@
 .window-content p.large-copy {
   font-size: 1.25em;
   line-height: 1.8;
-  margin-bottom: 24px;
+  margin-bottom: 1.5em;
 }
 
 .window-content p.medium-copy {
   font-size: 1em;
   line-height: 1.6;
-  margin-bottom: 20px;
+  margin-bottom: 1.25em;
 }
 
 .window-content p.small-copy {
   font-size: 0.875em;
   line-height: 1.5;
-  margin-bottom: 16px;
+  margin-bottom: 1em;
 }
