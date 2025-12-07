@@ -4,19 +4,15 @@
 
 /* ===== BASE STYLES ===== */
 
-html {
-  min-width: 56.25em;
-  max-width: 75em;
-}
-
-body {
+html body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
   font-family: "vista-sans", sans-serif;
   background: #0a0e1a;
-  margin: 0em;
-  padding: 1.25em;
-  /* overflow: hidden; */
-  z-index: -1000;
   box-sizing: border-box;
+  padding: 1.25em;
 }
 
 /* ===== MAIN TITLE SECTION ===== */
@@ -25,9 +21,7 @@ body {
   top: 5%;
   left: 50%;
   transform: translate(-50%, 0);
-  z-index: -1000;
-  width: 100%;
-  text-align: center;
+  width: fit-content;
 }
 
 .Title h1 {
@@ -37,7 +31,6 @@ body {
   text-align: center;
   letter-spacing: 8px;
   position: relative;
-  z-index: -10;
 }
 
 .Title h2 {
@@ -48,7 +41,6 @@ body {
   font-weight: normal;
   letter-spacing: 4px;
   position: relative;
-  z-index: -10;
 }
 
 /* ===== CORNER STYLES ===== */
@@ -61,7 +53,6 @@ body {
   height: 9.375em;
   border-top: 3px solid #00d9ff;
   border-left: 3px solid #00d9ff;
-  z-index: 1000;
 }
 
 .corner-top-right {
@@ -72,7 +63,6 @@ body {
   height: 9.375em;
   border-top: 3px solid #00d9ff;
   border-right: 3px solid #00d9ff;
-  z-index: -1000;
 }
 
 .corner-bottom-left {
@@ -83,7 +73,6 @@ body {
   height: 9.375em;
   border-bottom: 3px solid #00d9ff;
   border-left: 3px solid #00d9ff;
-  z-index: -1000;
 }
 
 .corner-bottom-right {
@@ -94,7 +83,6 @@ body {
   height: 9.375em;
   border-bottom: 3px solid #00d9ff;
   border-right: 3px solid #00d9ff;
-  z-index: -1000;
 }
 
 a {
@@ -108,7 +96,7 @@ a {
   gap: 0.625em;
   align-items: flex-start;
   position: relative;
-  margin-top: 2.5em;
+  margin-top: 2.15em;
   margin-left: 1.875em;
 }
 
@@ -123,8 +111,8 @@ a {
 }
 
 .icon {
-  width: 5em;
-  height: 5em;
+  width: 3vw;
+  height: 3vw;
   background: #14141f;
   display: flex;
   justify-content: center;

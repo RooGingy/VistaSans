@@ -5,14 +5,11 @@
 /* ===== THREE-WINDOW LAYOUT ===== */
 .windows-container {
   position: relative;
-  width: 100%;
 }
 
 /* ===== WINDOW STRUCTURE ===== */
 .window {
   position: fixed;
-  width: 25%;
-  min-width: 18.75em;
   background: #14141f;
   border: 2px solid #00d9ff;
   border-radius: 8px;
@@ -22,21 +19,21 @@
 .window:nth-child(1) {
   left: 12%;
   top: 20%;
-  width: 30%;
+  width: 30vw;
   height: auto;
 }
 
 .window:nth-child(2) {
   top: 67%;
   left: 45%;
-  width: 20%;
+  width: 20vw;
   height: auto;
 }
 
 .window:nth-child(3) {
   left: 47%;
   top: 20%;
-  width: 36%;
+  width: 36vw;
   height: auto;
 }
 
