@@ -26,8 +26,8 @@
 /* ===== STICKY NOTE BASE STYLES ===== */
 .sticky-note {
   position: absolute;
-  width: 20vw;
-  height: 20vw;
+  width: 22vw;
+  height: 22vw;
   border-radius: 3px;
   padding: 30px;
 }
