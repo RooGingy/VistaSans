@@ -169,3 +169,8 @@ a {
 .experiments-icon p {
   color: #8338ec;
 }
+
+.close-button {
+  background: #14141f;
+  border-color: #ff8800;
+}

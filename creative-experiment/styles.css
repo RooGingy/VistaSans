@@ -3,93 +3,210 @@
    HOLOGRAPHIC STICKY NOTES
    =================================== */
 
-/* ===== STICKY NOTE BASE STYLES ===== */
-.sticky-note {
-    position: absolute;
-    width: 20vw;
-    height: 20vw;
-    border-radius: 3px;
-    padding: 30px;
-}
-
 /* Close Button */
 .close-button {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    width: 16px;
-    height: 16px;
-    background: #14141f;
-    border: 1px solid #ff3355;
-    border-radius: 3px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 12px;
-    font-weight: bold;
-    color: #ff3355;
-    text-shadow: 0 0 5px #ff3355;
-    z-index: 10;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 0.75vw;
+  height: 0.75vw;
+  background: #14141f;
+  border: 1px solid #ff3355;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: bold;
+  color: #ff3355;
+  text-shadow: 0 0 5px #ff3355;
+  z-index: 10;
+}
+
+/* ===== STICKY NOTE BASE STYLES ===== */
+.sticky-note {
+  position: absolute;
+  width: 20vw;
+  height: 20vw;
+  border-radius: 3px;
+  padding: 30px;
 }
 
 /* Note Positioning */
 .note-1 {
-    top: 8%;
-    left: 12%;
-    background: #8338ec33;
-    border: 2px solid #8338ec80;
+  top: 8%;
+  left: 12%;
+  background: #8338ec33;
+  border: 2px solid #8338ec80;
+  overflow: hidden;
+  width: 18vw;
+  height: 18vw;
+}
+
+.note-1 .note-content {
+  display: block;
+}
+
+.rocket {
+  transform: rotate(35deg);
+  animation: moveDiagonal 9s linear infinite;
+  position: absolute;
+  font-size: 30px;
+  font-weight: 900;
+  line-height: 0.85;
+  font-style: italic;
+  color: white;
+}
+
+@keyframes moveDiagonal {
+  0% {
+    bottom: -100%;
+    left: -50%;
+  }
+
+  100% {
+    bottom: 150%;
+    left: 150%;
+  }
 }
 
 .note-2 {
-    top: 15%;
-    right: 8%;
-    background: #ff880033;
-    border: 2px solid #ff880080;
+  top: 15%;
+  right: 8%;
+  background: #ff880033;
+  border: 2px solid #ff880080;
+}
+
+.typing {
+  text-transform: capitalize;
+  padding-right: 5px;
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 0;
+  border-right: 1px solid white;
+  animation: blinking 1s steps(1, end) infinite, typing 4s steps(40, end);
+  margin-bottom: 4ch;
+}
+
+@keyframes blinking {
+  0% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: white;
+  }
+  100% {
+    border-color: transparent;
+  }
+}
+
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.p1 {
+  font-family: "vista-sans-narrow", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  font-size: 1.8em;
+  letter-spacing: 0.2em;
+}
+
+.p2 {
+  font-family: "vista-sans-narrow", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+  font-size: 0.7em;
+  letter-spacing: 0.2em;
+}
+
+.p3 {
+  font-family: "vista-sans-narrow", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 1.3em;
+  letter-spacing: 0.2em;
+}
+.p4 {
+  font-family: "vista-sans-narrow", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.8em;
+  letter-spacing: 0.2em;
+}
+
+.p5 {
+  font-family: "vista-sans-narrow", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  font-size: 1em;
+  letter-spacing: 0.2em;
 }
 
 .note-3 {
-    bottom: 10%;
-    left: 35%;
-    background: #00d9ff33;
-    border: 2px solid #00d9ff80;
+  bottom: 10%;
+  left: 35%;
+  background: #00d9ff33;
+  border: 2px solid #00d9ff80;
+}
+
+.text-here {
+  color: white;
+  margin-bottom: 5vw;
+}
+
+.ls {
+  font-family: "vista-sans-narrow", sans-serif;
+  font-weight: 100;
+  font-style: thin;
+  animation: big-to-small 4s linear infinite;
+}
+
+.bs {
+  margin-top: 2vw;
+  font-family: "vista-sans", sans-serif;
+  font-weight: 900;
+  font-style: bold;
+  animation: small-to-big 6s linear infinite;
+}
+
+@keyframes big-to-small {
+  0% {
+    transform: scale(7);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(7);
+  }
+}
+
+@keyframes small-to-big {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(8);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 /* ===== NOTE CONTENT ===== */
 .note-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    color: white;
-    height: 100%;
-    width: 100%;
-}
-
-.note-1 {
-    overflow: hidden;
-    width: 18vw;
-    height: 18vw;
-}
-
-.note-1 .note-content {
-    display: block;
-}
-
-.rocket {
-    transform: rotate(35deg);
-    animation: moveDiagonal 7s linear infinite;
-    position: absolute;
-}
-
-@keyframes moveDiagonal {
-    0% {
-        bottom: -100%;
-        left: -50%;
-    }
-
-    100% {
-        bottom: 100%;
-        left: 100%;
-    }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: white;
+  height: 100%;
+  width: 100%;
 }
