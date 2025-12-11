@@ -1,0 +1,95 @@
+/* ===================================
+   VISTA SANS - CREATIVE EXPERIMENTS PAGE
+   HOLOGRAPHIC STICKY NOTES
+   =================================== */
+
+/* ===== STICKY NOTE BASE STYLES ===== */
+.sticky-note {
+    position: absolute;
+    width: 20vw;
+    height: 20vw;
+    border-radius: 3px;
+    padding: 30px;
+}
+
+/* Close Button */
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 16px;
+    height: 16px;
+    background: #14141f;
+    border: 1px solid #ff3355;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: bold;
+    color: #ff3355;
+    text-shadow: 0 0 5px #ff3355;
+    z-index: 10;
+}
+
+/* Note Positioning */
+.note-1 {
+    top: 8%;
+    left: 12%;
+    background: #8338ec33;
+    border: 2px solid #8338ec80;
+}
+
+.note-2 {
+    top: 15%;
+    right: 8%;
+    background: #ff880033;
+    border: 2px solid #ff880080;
+}
+
+.note-3 {
+    bottom: 10%;
+    left: 35%;
+    background: #00d9ff33;
+    border: 2px solid #00d9ff80;
+}
+
+/* ===== NOTE CONTENT ===== */
+.note-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color: white;
+    height: 100%;
+    width: 100%;
+}
+
+.note-1 {
+    overflow: hidden;
+    width: 18vw;
+    height: 18vw;
+}
+
+.note-1 .note-content {
+    display: block;
+}
+
+.rocket {
+    transform: rotate(35deg);
+    animation: moveDiagonal 7s linear infinite;
+    position: absolute;
+}
+
+@keyframes moveDiagonal {
+    0% {
+        bottom: -100%;
+        left: -50%;
+    }
+
+    100% {
+        bottom: 100%;
+        left: 100%;
+    }
+}
