@@ -170,6 +170,7 @@
 .bs {
   margin-top: 2vw;
   font-family: "vista-sans", sans-serif;
+  
   font-weight: 900;
   font-style: bold;
   animation: small-to-big 6s linear infinite;
